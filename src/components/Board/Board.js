@@ -83,16 +83,6 @@ function Board() {
     localStorage.setItem('taskData', JSON.stringify(taskState));
     dispatch({ type: "LOAD_DATA", payload: taskState });
   }, [taskState, stages]);
-  
-  /* useEffect(() => {
-    if(localStorage.getItem('taskData')) {
-      dispatch({ type: "LOAD_DATA", payload: JSON.parse(localStorage.getItem('taskData')) });
-    }
-  }, []); */
-
-  /* useEffect(() => {
-    localStorage.setItem('taskData', JSON.stringify(taskState));
-  },[taskState]); */
 
   const onDragStartHandler = (
     event,
